@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/dev%20version-0.1.0-blue.svg)](https://github.com/CTU-Bern/randotools)
+[![](https://img.shields.io/badge/dev%20version-0.1.1-blue.svg)](https://github.com/CTU-Bern/randotools)
 [![R-CMD-check](https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/CTU-Bern/randotools/actions)
 
 <!-- badges: end -->
@@ -96,6 +96,40 @@ randolist_to_db(r, target_db = "REDCap",
                                        rand_result = 1:2)
                 )
 ```
+
+## Assessing randomisation imbalance
+
+Under some scenarios (e.g. minimization), it can be helpful to monitor
+the imbalance of the randomisation process. `randotools` includes some
+tools to assist with this, specifically in terms of comparing observed
+imbalance with what might be observed with simple random allocation.
+
+`imbalance_seq_plots` shows the evolution of imbalance along the
+randomisation sequence:
+
+``` r
+data(rando_balance)
+imbalance_seq_plots(rando_balance, "rando_res")
+#> Calculating sequential imbalance (overall)
+#> Calculating simulated sequential imbalance (overall)
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+`imbalance_test` compares the observed imbalance with random allocation,
+providing a p-value, which can then be plotted to inspect the observed
+(the red line) and simulated imbalances (the bars):
+
+``` r
+(imb <- imbalance_test(rando_balance, "rando_res"))
+#> assuming balanced randomisation between arms
+#> Randomisations to date: 100 
+#> Overall imbalance: 0 
+#>   Probability of equal or less imbalance from random allocation: 0.072
+imbalance_test_plot(imb)
+```
+
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ### Acknowledgements
 
