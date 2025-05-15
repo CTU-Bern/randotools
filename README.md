@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/dev%20version-0.0.4-blue.svg)](https://github.com/CTU-Bern/randotools)
+[![](https://img.shields.io/badge/dev%20version-0.1.0-blue.svg)](https://github.com/CTU-Bern/randotools)
 [![R-CMD-check](https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/CTU-Bern/randotools/actions)
 
 <!-- badges: end -->
@@ -46,9 +46,9 @@ summary(r)
 #> ---- Randomisation list report ----
 #> -- Overall
 #> Total number of randomisations:  106 
-#> Randomisation groups:  Trt1 Trt2 
+#> Randomisation groups:  Trt1 : Trt2 
 #> Randomisation ratio: 1:1 
-#> Randomisations to each arm: 1:1
+#> Randomisations to each arm:
 #> Trt1 Trt2 
 #>   53   53 
 #> Block sizes:
