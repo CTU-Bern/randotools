@@ -1,3 +1,8 @@
+# randotools 0.2.0
+
+Addition of `check_plan` to investigate a proposed randomisation strategy, in terms of 
+the balance that may be observed with specified number of strata and block sizes
+
 # randotools 0.1.1
 
 Minor improvements suggested by @lbeuti
