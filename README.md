@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/dev%20version-0.1.1-blue.svg)](https://github.com/CTU-Bern/randotools)
+[![](https://img.shields.io/badge/dev%20version-0.2.0-blue.svg)](https://github.com/CTU-Bern/randotools)
 [![R-CMD-check](https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/CTU-Bern/randotools/actions)
 
 <!-- badges: end -->
@@ -29,12 +29,43 @@ remotes::install_github("CTU-Bern/randotools")
 <!-- install.packages("randotools", repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org')) -->
 <!-- ``` -->
 
+## Check the imbalance expected for a proposed strata/blocksize combination
+
+Before generating a randomisation list, it can be useful to know whether
+the that will be attained with a certain number of strata is going to be
+appropriate.
+
+``` r
+library(randotools)
+set.seed(456)
+check_plan(50, n_strata = 5, n_sim = 100)
+#> 
+#> Number of simulated trials: 100 
+#>  Number of participants per trial: 50 
+#>  Number of strata: 5 
+#>  Blocksizes: 2, 4 
+#>  Mean imbalance: 1.66 Distribution of imbalance:
+#>  imbalance  n  % cum%
+#>          0 35 35   35
+#>          2 49 49   84
+#>          4 14 14   98
+#>          6  2  2  100
+#> 
+#> Worst case imbalance from simulations:
+#>   arm  n
+#> 1   A 22
+#> 2   B 28
+```
+
+In the above example, we a relatively high degree of imbalance for a
+relatively small sample size, so reducing the blocksize or number of
+strata would be recommended.
+
 ## Generating randomization lists
 
 Generate the randomisation list itself with `randolist`.
 
 ``` r
-library(randotools)
 set.seed(123)
 r <- randolist(50, arms = c("Trt1", "Trt2"), strata = list(sex = c("Female", "Male")))
 ```
