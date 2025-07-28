@@ -98,7 +98,7 @@ print.checkplan <- function(x, ...){
       "Number of participants per trial:", x$n_rando, "\n",
       "Number of strata:", x$n_strata, "\n",
       "Blocksizes:", paste(length(x$arms) * x$blocksizes, collapse = ", "), "\n",
-      "Mean imbalance:", x$mean,
+      "Mean imbalance:", x$mean, "\n",
       "Distribution of imbalance:\n")
   x$counts |> print(row.names = FALSE, ...)
 
