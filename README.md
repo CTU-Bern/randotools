@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/dev%20version-0.2.0-blue.svg)](https://github.com/CTU-Bern/randotools)
+[![](https://img.shields.io/badge/dev%20version-0.2.1-blue.svg)](https://github.com/CTU-Bern/randotools)
 [![R-CMD-check](https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/CTU-Bern/randotools/actions)
 
 <!-- badges: end -->
@@ -44,7 +44,8 @@ check_plan(50, n_strata = 5, n_sim = 100)
 #>  Number of participants per trial: 50 
 #>  Number of strata: 5 
 #>  Blocksizes: 2, 4 
-#>  Mean imbalance: 1.66 Distribution of imbalance:
+#>  Mean imbalance: 1.66 
+#>  Distribution of imbalance:
 #>  imbalance  n  % cum%
 #>          0 35 35   35
 #>          2 49 49   84
