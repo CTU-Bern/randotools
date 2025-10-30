@@ -2,6 +2,7 @@
 set.seed(1)
 res1 <- blockrand(100, blocksizes = c(1, 2))
 res2 <- blockrand(100, blocksizes = 1:3, arms = c("Foo", "Bar"))
+res3 <- blockrand(100, blocksizes = c(1, 2), pascal = FALSE)
 
 test_that("structure as expected", {
   expect_s3_class(res1, "data.frame")
@@ -30,11 +31,14 @@ test_that("number of randomizations is sufficient", {
 test_that("block sizes approximately correct", {
   freqs <- table(res2[res2$seq_in_block == 1, "blocksize"])
   expect_equal(freqs, c(8, 13, 6), ignore_attr = TRUE)
+  freqs <- table(res3[res3$seq_in_block == 1, "blocksize"])
+  expect_equal(freqs, c(16, 17), ignore_attr = TRUE)
 })
 
 test_that("correct block sizes", {
   expect_true(all(res1$blocksize %in% c(2,4)))
   expect_true(all(res2$blocksize %in% c(2,4,6)))
+  expect_true(all(res3$blocksize %in% c(2,4)))
 })
 
 test_that("arm labels", {

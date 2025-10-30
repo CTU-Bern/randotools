@@ -50,10 +50,10 @@ expected via a random draw, via a permutation test.
 \examples{
 data(rando_balance)
 # without stratification variables
-imbalance_test(rando_balance, "rando_res")
-imb <- imbalance_test(rando_balance, "rando_res", stratavars = "strat1")
-imbalance_test(rando_balance, "rando_res", stratavars = c("strat1", "strat2"))
-imb <- imbalance_test(rando_balance, "rando_res2", stratavars = c("strat1", "strat2"))
+imbalance_test(rando_balance, "rando_res", n_iter = 50)
+imb <- imbalance_test(rando_balance, "rando_res", stratavars = "strat1", n_iter = 50)
+imbalance_test(rando_balance, "rando_res", stratavars = c("strat1", "strat2"), n_iter = 50)
+imb <- imbalance_test(rando_balance, "rando_res2", stratavars = c("strat1", "strat2"), n_iter = 50)
 }
 \seealso{
 \code{\link[=imbalance_test_plot]{imbalance_test_plot()}}

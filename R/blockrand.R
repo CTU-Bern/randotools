@@ -43,6 +43,9 @@ blockrand <- function(n,
                       ...
                       ){
 
+  if(n < 2) stop("n too small")
+  if(is.null(arms)) stop("arms must be provided")
+
   N_per_block <- blocksizes * length(arms)
 
   if(length(blocksizes) > 1){

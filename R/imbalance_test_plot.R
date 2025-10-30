@@ -17,7 +17,7 @@
 #' # example code
 #' data(rando_balance)
 #' # without stratification variables
-#' imb <- imbalance_test(rando_balance, "rando_res2", stratavars = c("strat1", "strat2"))
+#' imb <- imbalance_test(rando_balance, "rando_res2", stratavars = c("strat1", "strat2"), n_iter = 50)
 #' imbalance_test_plot(imb)
 #'
 

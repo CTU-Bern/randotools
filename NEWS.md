@@ -1,3 +1,7 @@
+# randotools 0.2.1
+
+Add lots of tests, minor modifications to clear notes from R CMD CHECK
+
 # randotools 0.2.0
 
 Addition of `check_plan` to investigate a proposed randomisation strategy, in terms of 
