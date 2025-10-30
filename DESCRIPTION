@@ -11,7 +11,7 @@ License: GPL (>= 3)
 Url: https://ctu-bern.github.io/randolist/, https://github.com/CTU-Bern/randolist
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Imports:
     cli,
     dplyr,
@@ -29,5 +29,5 @@ Config/testthat/edition: 3
 URL: https://ctu-bern.github.io/randolist/
 VignetteBuilder: knitr
 Depends: 
-    R (>= 3.5)
+    R (>= 4.1)
 LazyData: true
