@@ -35,6 +35,8 @@ check_plan <- function(n_rando,
 
   strata <- letters[1:n_strata]
 
+  strata_txt <- nth <- seq_in_strata <- arm <- N <- `%` <- NULL
+
   sims <- lapply(cli_progress_along(1:n_sim, clear = TRUE), function(x){
     rl <- randolist(n = n_rando, arms = arms, strata = list(strata), blocksizes = blocksizes)
     sim_parts <- data.frame(strata = sample(strata, n_rando, replace = TRUE)) |>
