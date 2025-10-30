@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   imbalance: imbalance.html
   randotools: randotools.html
-last_built: 2025-10-30T15:50Z
+last_built: 2025-10-30T15:53Z
 urls:
   reference: https://CTU-Bern.github.io/randolist/reference
   article: https://CTU-Bern.github.io/randolist/articles
