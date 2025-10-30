@@ -2,7 +2,7 @@ Package: randotools
 Title: Create Randomization Lists From R
 Version: 0.2.1
 Authors@R: 
-    c(person("Alan", "Haynes", "G", email = "alan.haynes@unibe.ch", 
+    c(person("Alan G", "Haynes", email = "alan.haynes@unibe.ch", 
              role = c("aut", "cre"),
              comment = c(ORCID = "0000-0003-1374-081X"))
            )
