@@ -9,7 +9,7 @@ could be used for quality control."><meta property="og:image" content="https://C
 
     <a class="navbar-brand me-2" href="../index.html">randotools</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,60 +76,60 @@ could be used for quality control.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  A  B </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 10 10 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Block sizes:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 4 6 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 3 1 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">r2</span> <span class="op">&lt;-</span> <span class="fu"><a href="randolist.html">randolist</a></span><span class="op">(</span><span class="fl">20</span>, strata <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"M"</span>, <span class="st">"F"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">r2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ---- Randomisation list report ----</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> -- Overall</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Total number of randomisations:  48 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Total number of randomisations:  42 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Randomisation groups:  A : B </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Randomisation ratio: 1:1 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Randomisations to each arm:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  A  B </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24 24 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 21 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Block sizes:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 4 6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 4 5 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 5 3 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> -- Stratifier level </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Randomisation list is stratified by variables sex </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> -  1 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Randomisations per level of sex :</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  M  F </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24 24 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 20 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Balance per level of sex :   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      A  B</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   M 12 12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   F 12 12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   M 11 11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   F 10 10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> -- Stratum level </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 strata are defined:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  F  M </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24 24 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 22 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> -  F </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Number of randomisations:  24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Number of randomisations:  22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  A  B </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 12 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Block sizes: </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 2 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -  M </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Number of randomisations:  24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  A  B </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 12 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 11 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Block sizes: </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 4 6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1 3 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 3 1 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -  M </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Number of randomisations:  20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  A  B </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 10 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Block sizes: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 6 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 2 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 4 6 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 3 1 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 4 6 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1 3 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 6 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># NOTE: explicitly printing isn't technically necessary</span></span></span>
