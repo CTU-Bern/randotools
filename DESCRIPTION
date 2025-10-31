@@ -1,6 +1,6 @@
 Package: randotools
-Title: Create Randomization Lists From R
-Version: 0.2.1
+Title: Create Randomization Lists from R
+Version: 0.2.2
 Authors@R: 
     c(person("Alan G", "Haynes", email = "alan.haynes@unibe.ch", 
              role = c("aut", "cre"),
@@ -8,7 +8,8 @@ Authors@R:
            )
 Description: Randomization lists are an integral component of randomized clinical trials. randotools provides tools to easily create such lists.
 License: GPL (>= 3)
-Url: https://ctu-bern.github.io/randolist/, https://github.com/CTU-Bern/randolist
+URL: https://ctu-bern.github.io/randotools/, https://github.com/CTU-Bern/randotools
+BugReports: https://github.com/CTU-Bern/randotools/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
@@ -26,7 +27,6 @@ Suggests:
     testthat (>= 3.0.0),
     tibble
 Config/testthat/edition: 3
-URL: https://ctu-bern.github.io/randolist/
 VignetteBuilder: knitr
 Depends: 
     R (>= 4.1)

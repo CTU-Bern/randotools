@@ -51,6 +51,7 @@ imbalance within each strata (i.e. the interaction among stratifying
 variables) and within strata identified by each stratifying variable itself.
 }
 \examples{
+\donttest{
 data(rando_balance)
 # without stratification variables
 imbalance_seq_plots(rando_balance, "rando_res")
@@ -61,5 +62,5 @@ imbalance_seq_plots(rando_balance, "rando_res",
 imbalance_seq_plots(rando_balance, "rando_res",
                     c("strat1", "strat2"),
                     cross = FALSE)
-
+}
 }
