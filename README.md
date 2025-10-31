@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/dev%20version-0.2.1-blue.svg)](https://github.com/CTU-Bern/randotools)
+[![](https://img.shields.io/badge/dev%20version-0.2.2-blue.svg)](https://github.com/CTU-Bern/randotools)
 [![R-CMD-check](https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/CTU-Bern/randotools/actions)
 
 <!-- badges: end -->
@@ -39,6 +39,7 @@ appropriate.
 library(randotools)
 set.seed(456)
 check_plan(50, n_strata = 5, n_sim = 100)
+#> ■■■■■■■■■■■■■■■■■■■■■■■■■■        83% | ETA:  0s
 #> 
 #> Number of simulated trials: 100 
 #>  Number of participants per trial: 50 
