@@ -34,6 +34,7 @@
 #' @importFrom patchwork wrap_plots
 #' @export
 #' @examples
+#' \donttest{
 #' data(rando_balance)
 #' # without stratification variables
 #' imbalance_seq_plots(rando_balance, "rando_res")
@@ -44,7 +45,7 @@
 #' imbalance_seq_plots(rando_balance, "rando_res",
 #'                     c("strat1", "strat2"),
 #'                     cross = FALSE)
-#'
+#' }
 imbalance_seq_plots <- function(data,
                                 randovar,
                                 stratavars = NULL,
