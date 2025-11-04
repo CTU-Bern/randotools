@@ -11,6 +11,22 @@
 
 \item{...}{additional arguments (currently unused)}
 }
+\value{
+object of class randolistsum, which is a list with elements
+\itemize{
+\item \code{n_rando}: total number of randomisations
+\item \code{n_blocks}: maximum number of blocks
+\item \code{block_sizes}: table of block sizes
+\item \code{arms}: table of arms
+\item \code{ratio}: randomisation ratio (character)
+\item \code{stratified}: logical
+\item \code{stratavars}: names of stratifying variables (character)
+\item \code{stratavars_tabs}: tabulation of arms by each stratifcation variable
+\item \code{strata}: names of each individual stratum
+\item \code{stratum_tabs}: list with an element for each strata with \code{n_rando},
+\code{n_blocks}, \code{block_sizes}, \code{arms} and \code{ratio}.
+}
+}
 \description{
 Create a short summary report of the aspects of the randomisation list, which
 could be used for quality control.

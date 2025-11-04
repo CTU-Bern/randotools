@@ -29,6 +29,11 @@
 #'
 #' @export
 #'
+#' @returns object of class `randolist` which is a dataframe with additional
+#' attributes ratio (randomisation ratio, e.g. 1:1, 2:1), arms (arm labels),
+#' stratified (logical whether the list is stratified), and stratavars (the
+#' stratification variables)
+#'
 #' @examples
 #' # example code
 #' randolist(10)
