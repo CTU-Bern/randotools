@@ -9,7 +9,7 @@ could be used for quality control."><meta property="og:image" content="https://C
 
     <a class="navbar-brand me-2" href="../index.html">randotools</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.3</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,6 +62,20 @@ could be used for quality control.</p>
 <dd><p>additional arguments (currently unused)</p></dd>
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p>object of class randolistsum, which is a list with elements</p><ul><li><p><code>n_rando</code>: total number of randomisations</p></li>
+<li><p><code>n_blocks</code>: maximum number of blocks</p></li>
+<li><p><code>block_sizes</code>: table of block sizes</p></li>
+<li><p><code>arms</code>: table of arms</p></li>
+<li><p><code>ratio</code>: randomisation ratio (character)</p></li>
+<li><p><code>stratified</code>: logical</p></li>
+<li><p><code>stratavars</code>: names of stratifying variables (character)</p></li>
+<li><p><code>stratavars_tabs</code>: tabulation of arms by each stratifcation variable</p></li>
+<li><p><code>strata</code>: names of each individual stratum</p></li>
+<li><p><code>stratum_tabs</code>: list with an element for each strata with <code>n_rando</code>,
+<code>n_blocks</code>, <code>block_sizes</code>, <code>arms</code> and <code>ratio</code>.</p></li>
+</ul></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>

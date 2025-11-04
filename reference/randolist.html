@@ -9,7 +9,7 @@ to generate randomisation lists simply, via (optionally) stratified block random
 
     <a class="navbar-brand me-2" href="../index.html">randotools</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.3</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,6 +84,13 @@ to generate randomisation lists simply, via (optionally) stratified block random
 <dd><p>arguments passed on to other methods</p></dd>
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p>object of class <code>randolist</code> which is a dataframe with additional
+attributes ratio (randomisation ratio, e.g. 1:1, 2:1), arms (arm labels),
+stratified (logical whether the list is stratified), and stratavars (the
+stratification variables)</p>
+    </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p><code>blocksizes</code> defines the number of allocations to each arm in a block.
