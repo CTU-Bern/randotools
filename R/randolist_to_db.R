@@ -16,6 +16,8 @@
 #' to `randolist`, and a variable with the name required by the
 #' database with the values that map to those in `arm`. See the examples.
 #'
+#' @returns dataframe with columns required for import into `target_db`
+#'
 #' @importFrom dplyr select rename left_join mutate across all_of n relocate
 #' @importFrom rlang arg_match :=
 #' @export

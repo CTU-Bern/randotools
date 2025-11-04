@@ -1,8 +1,8 @@
 library(ggplot2)
 library(scales)
 library(hexSticker)
-install.packages('rsvg')
-remotes::install_github('coolbutuseless/ggsvg')
+# install.packages('rsvg')
+# remotes::install_github('coolbutuseless/ggsvg')
 library(ggsvg)
 
 svg_txt <- readLines("inst/dice.svg")

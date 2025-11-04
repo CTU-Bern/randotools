@@ -28,6 +28,18 @@ summary_int <- function(object, ...){
 #'
 #' @param object randolist object
 #' @param ... additional arguments (currently unused)
+#' @returns object of class randolistsum, which is a list with elements
+#' * `n_rando`: total number of randomisations
+#' * `n_blocks`: maximum number of blocks
+#' * `block_sizes`: table of block sizes
+#' * `arms`: table of arms
+#' * `ratio`: randomisation ratio (character)
+#' * `stratified`: logical
+#' * `stratavars`: names of stratifying variables (character)
+#' * `stratavars_tabs`: tabulation of arms by each stratifcation variable
+#' * `strata`: names of each individual stratum
+#' * `stratum_tabs`: list with an element for each strata with `n_rando`,
+#' `n_blocks`, `block_sizes`, `arms` and `ratio`.
 #' @export
 #' @examples
 #' r <- randolist(20)

@@ -26,6 +26,12 @@ randolist(
 
 \item{...}{arguments passed on to other methods}
 }
+\value{
+object of class \code{randolist} which is a dataframe with additional
+attributes ratio (randomisation ratio, e.g. 1:1, 2:1), arms (arm labels),
+stratified (logical whether the list is stratified), and stratavars (the
+stratification variables)
+}
 \description{
 Randomisation lists are central to randomised trials. This function allows
 to generate randomisation lists simply, via (optionally) stratified block randomisation

@@ -7,3 +7,4 @@
 ^\.github$
 README.Rmd
 ^data-raw$
+^inst/logo.R

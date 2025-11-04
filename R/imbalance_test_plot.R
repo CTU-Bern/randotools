@@ -11,6 +11,7 @@
 #' plots in one column (`TRUE`) or return a list of ggplot objects (`FALSE`)
 #' @importFrom ggplot2 geom_histogram geom_vline
 #' @importFrom patchwork wrap_plots
+#' @returns list of ggplots or a patchwork off ggplots (if `stack = TRUE`)
 #' @seealso [imbalance_test()]
 #' @export
 #' @examples

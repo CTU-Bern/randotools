@@ -14,6 +14,9 @@ imbalance_test_plot(test, vline_col = "red", stack = TRUE)
 \item{stack}{logical, whether to use \code{patchwork::wrap_plots} to stack the
 plots in one column (\code{TRUE}) or return a list of ggplot objects (\code{FALSE})}
 }
+\value{
+list of ggplots or a patchwork off ggplots (if \code{stack = TRUE})
+}
 \description{
 Plot histograms of imbalance values from simulated random allocation and a vertical
 lines to indicate the observed imbalance for each randomisation level (overall,

@@ -22,6 +22,9 @@ the values used in the database. See the examples for details.}
 
 \item{rando_enc}{a data frame with the randomization encoding}
 }
+\value{
+dataframe with columns required for import into \code{target_db}
+}
 \description{
 Databases generally require a specific format to be able to import a randomization
 list. This function converts the randolist object to the format required by
