@@ -1,3 +1,7 @@
+# randotools 0.2.3
+
+minor modifications from CRAN review
+
 # randotools 0.2.1
 
 Add lots of tests, minor modifications to clear notes from R CMD CHECK
