@@ -5,23 +5,11 @@ other related tasks, in R.
 
 ## Installation
 
-`randotools` is available from CRAN:
-
-``` r
-install.packages("randotools")
-```
-
 You can install the development version of `randotools` from github
 with:
 
 ``` r
 remotes::install_github("CTU-Bern/randotools")
-```
-
-Or from CTU Bern’s package universe
-
-``` r
-install.packages("randotools", repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ## Check the imbalance expected for a proposed strata/blocksize combination
@@ -34,7 +22,6 @@ appropriate.
 library(randotools)
 set.seed(456)
 check_plan(50, n_strata = 5, n_sim = 100)
-#> ■■■■■■■■■■■■■■■■■■■■■             65% | ETA:  1s
 #> 
 #> Number of simulated trials: 100 
 #>  Number of participants per trial: 50 
