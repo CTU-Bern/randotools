@@ -67,28 +67,30 @@
 </div>
 <!-- badges: start -->
 
-<!-- badges: end -->
 <p><code>randotools</code> contains functions for creating randomisation lists, and other related tasks, in R.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
+<p><code>randotools</code> is available from CRAN:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"randotools"</span><span class="op">)</span></span></code></pre></div>
 <p>You can install the development version of <code>randotools</code> from github with:</p>
 <!-- install.packages("randotools") -->
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"CTU-Bern/randotools"</span><span class="op">)</span></span></code></pre></div>
-<!-- Or from CTU Bern's package universe -->
-<!-- ``` r -->
-<!-- install.packages("randotools", repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org')) -->
-<!-- ``` -->
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"CTU-Bern/randotools"</span><span class="op">)</span></span></code></pre></div>
+<p>Or from CTU Bern’s package universe</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"randotools"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'https://ctu-bern.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="check-the-imbalance-expected-for-a-proposed-stratablocksize-combination">Check the imbalance expected for a proposed strata/blocksize combination<a class="anchor" aria-label="anchor" href="#check-the-imbalance-expected-for-a-proposed-stratablocksize-combination"></a>
 </h2>
 <p>Before generating a randomisation list, it can be useful to know whether the that will be attained with a certain number of strata is going to be appropriate.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ctu-bern.github.io/randotools/" class="external-link">randotools</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">456</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/check_plan.html">check_plan</a></span><span class="op">(</span><span class="fl">50</span>, n_strata <span class="op">=</span> <span class="fl">5</span>, n_sim <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span><span class="co">#&gt; ■■■■■■■■■■■■■■■■■■■■■             65% | ETA:  1s</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Number of simulated trials: 100 </span></span>
 <span><span class="co">#&gt;  Number of participants per trial: 50 </span></span>
@@ -112,11 +114,11 @@
 <h2 id="generating-randomization-lists">Generating randomization lists<a class="anchor" aria-label="anchor" href="#generating-randomization-lists"></a>
 </h2>
 <p>Generate the randomisation list itself with <code>randolist</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
 <span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/randolist.html">randolist</a></span><span class="op">(</span><span class="fl">50</span>, arms <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Trt1"</span>, <span class="st">"Trt2"</span><span class="op">)</span>, strata <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Female"</span>, <span class="st">"Male"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Create a short summary of the randomisation list with <code>summary</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">r</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ---- Randomisation list report ----</span></span>
 <span><span class="co">#&gt; -- Overall</span></span>
@@ -159,7 +161,7 @@
 <span><span class="co">#&gt; 2 4 6 </span></span>
 <span><span class="co">#&gt; 4 8 2</span></span></code></pre></div>
 <p>Export the randomisation list in a database compatible format with <code>randolist_to_db</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/randolist_to_db.html">randolist_to_db</a></span><span class="op">(</span><span class="va">r</span>, target_db <span class="op">=</span> <span class="st">"REDCap"</span>,</span>
 <span>                strata_enc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>sex <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Female"</span>, <span class="st">"Male"</span><span class="op">)</span>,</span>
 <span>                                                   code <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -172,12 +174,12 @@
 </h2>
 <p>Under some scenarios (e.g. minimization), it can be helpful to monitor the imbalance of the randomisation process. <code>randotools</code> includes some tools to assist with this, specifically in terms of comparing observed imbalance with what might be observed with simple random allocation.</p>
 <p><code>imbalance_seq_plots</code> shows the evolution of imbalance along the randomisation sequence:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">rando_balance</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/imbalance_seq_plots.html">imbalance_seq_plots</a></span><span class="op">(</span><span class="va">rando_balance</span>, <span class="st">"rando_res"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/imbseq-1.png" width="100%"></p>
 <p><code>imbalance_test</code> compares the observed imbalance with random allocation, providing a p-value, which can then be plotted to inspect the observed (the red line) and simulated imbalances (the bars):</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">(</span><span class="va">imb</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/imbalance_test.html">imbalance_test</a></span><span class="op">(</span><span class="va">rando_balance</span>, <span class="st">"rando_res"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Randomisations to date: 100 </span></span>
 <span><span class="co">#&gt; Overall imbalance: 0 </span></span>
@@ -195,6 +197,7 @@
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
+<li><a href="https://cloud.r-project.org/package=randotools" class="external-link">View on CRAN</a></li>
 <li><a href="https://github.com/CTU-Bern/randotools/" class="external-link">Browse source code</a></li>
 <li><a href="https://github.com/CTU-Bern/randotools/issues" class="external-link">Report a bug</a></li>
 </ul>
@@ -228,6 +231,7 @@
 <ul class="list-unstyled">
 <li><a href="https://github.com/CTU-Bern/randotools" class="external-link"><img src="https://img.shields.io/badge/dev%20version-0.2.3-blue.svg"></a></li>
 <li><a href="https://github.com/CTU-Bern/randotools/actions" class="external-link"><img src="https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://CRAN.R-project.org/package=randotools" class="external-link"><img src="https://www.r-pkg.org/badges/version/randotools" alt="CRAN status"></a></li>
 </ul>
 </div>
 
@@ -240,7 +244,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
