@@ -19,12 +19,18 @@ knitr::opts_chunk$set(
 
 `r badger::badge_custom("dev version", as.character(packageVersion("randotools")), "blue", "https://github.com/CTU-Bern/randotools")`
 [![R-CMD-check](https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/CTU-Bern/randotools/actions)
-
+[![CRAN status](https://www.r-pkg.org/badges/version/randotools)](https://CRAN.R-project.org/package=randotools)
 <!-- badges: end -->
 
 `randotools` contains functions for creating randomisation lists, and other related tasks, in R.
 
 ## Installation
+
+`randotools` is available from CRAN:
+
+``` r 
+install.packages("randotools")
+```
 
 You can install the development version of `randotools` from github with:
 
@@ -34,11 +40,11 @@ You can install the development version of `randotools` from github with:
 remotes::install_github("CTU-Bern/randotools")
 ```
 
-<!-- Or from CTU Bern's package universe -->
+Or from CTU Bern's package universe
 
-<!-- ``` r -->
-<!-- install.packages("randotools", repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org')) -->
-<!-- ``` -->
+``` r
+install.packages("randotools", repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org'))
+```
 
 ## Check the imbalance expected for a proposed strata/blocksize combination
 
