@@ -1,5 +1,10 @@
 # Changelog
 
+## randotools 0.2.4
+
+bug fix for `check_plan`: it only handled up to 26 strata, producing
+unexpected results with more strata. It now handles up to 676 strata.
+
 ## randotools 0.2.3
 
 CRAN release: 2025-11-07
