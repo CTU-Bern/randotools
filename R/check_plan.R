@@ -33,7 +33,12 @@ check_plan <- function(n_rando,
                        blocksizes = c(1, 2),
                        n_sim = 1000){
 
-  strata <- letters[1:n_strata]
+  letterx <- expand.grid(letters, letters)
+  stratlabs <- paste0(letterx$Var1, letterx$Var2)
+
+  if(n_strata > length(stratlabs)) stop("maximum number of strata (",
+                                      length(stratlabs), ") exceeded")
+  strata <- stratlabs[1:n_strata]
 
   strata_txt <- nth <- seq_in_strata <- arm <- N <- `%` <- NULL
 
