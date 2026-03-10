@@ -80,7 +80,7 @@ imbalance_test(rando_balance, "rando_res", n_iter = 50)
 #> assuming balanced randomisation between arms
 #> Randomisations to date: 100 
 #> Overall imbalance: 0 
-#>   Probability of equal or less imbalance from random allocation: 0.12 
+#>   Probability of equal or less imbalance from random allocation: 0.02 
 imb <- imbalance_test(rando_balance, "rando_res", stratavars = "strat1", n_iter = 50)
 #> assuming balanced randomisation between arms
 imbalance_test(rando_balance, "rando_res", stratavars = c("strat1", "strat2"), n_iter = 50)
@@ -93,7 +93,7 @@ imbalance_test(rando_balance, "rando_res", stratavars = c("strat1", "strat2"), n
 #> Maximum observed imbalanced within stratifying variables: 0 
 #>   Probability of equal or less imbalance from random allocation: 0.16 
 #> Maximum observed imbalanced within individual strata: 3 
-#>   Probability of equal or less imbalance from random allocation: 0.2 
+#>   Probability of equal or less imbalance from random allocation: 0.12 
 imb <- imbalance_test(rando_balance, "rando_res2", stratavars = c("strat1", "strat2"), n_iter = 50)
 #> assuming balanced randomisation between arms
 ```

@@ -52,15 +52,15 @@ r <- randolist(20)
 print(summary(r))
 #> ---- Randomisation list report ----
 #> -- Overall
-#> Total number of randomisations:  20 
+#> Total number of randomisations:  22 
 #> Randomisation groups:  A : B 
 #> Randomisation ratio: 1:1 
 #> Randomisations to each arm:
 #>  A  B 
-#> 10 10 
+#> 11 11 
 #> Block sizes:
 #> 2 4 6 
-#> 1 3 1 
+#> 1 2 2 
 
 r2 <- randolist(20, strata = list(sex = c("M", "F")))
 print(summary(r2))
@@ -74,7 +74,7 @@ print(summary(r2))
 #> 21 21 
 #> Block sizes:
 #> 2 4 6 
-#> 2 5 3 
+#> 1 4 4 
 #> -- Stratifier level 
 #> Randomisation list is stratified by variables sex 
 #> -  1 
@@ -96,7 +96,7 @@ print(summary(r2))
 #> 11 11 
 #> Block sizes: 
 #> 2 4 6 
-#> 2 3 1 
+#> 1 2 2 
 #> -  M 
 #> Number of randomisations:  20
 #>  A  B 
@@ -107,7 +107,7 @@ print(summary(r2))
 #> [[1]]
 #> 
 #> 2 4 6 
-#> 2 3 1 
+#> 1 2 2 
 #> 
 #> [[2]]
 #> 

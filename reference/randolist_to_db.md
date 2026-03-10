@@ -59,26 +59,28 @@ randolist_to_db(r,
                                     code = 1:2)),
   target_db = "REDCap")
 #>    rando_res sex
-#> 1          1   1
-#> 2          2   1
-#> 3          1   1
-#> 4          2   1
+#> 1          2   1
+#> 2          1   1
+#> 3          2   1
+#> 4          1   1
 #> 5          1   1
 #> 6          2   1
-#> 7          2   1
+#> 7          1   1
 #> 8          2   1
 #> 9          1   1
-#> 10         1   1
-#> 11         2   2
-#> 12         1   2
-#> 13         2   2
-#> 14         1   2
-#> 15         2   2
-#> 16         1   2
-#> 17         2   2
+#> 10         2   1
+#> 11         1   2
+#> 12         2   2
+#> 13         1   2
+#> 14         2   2
+#> 15         1   2
+#> 16         2   2
+#> 17         1   2
 #> 18         2   2
 #> 19         1   2
-#> 20         1   2
+#> 20         2   2
+#> 21         1   2
+#> 22         2   2
 randolist_to_db(r,
   rando_enc = data.frame(arm = c("T1", "T2"),
                          rando_res = c(1, 2)),
@@ -88,24 +90,26 @@ randolist_to_db(r,
 #> Warning: rando_enc ignored for secuTrial
 #> Warning: The SecuTrial target is untested and may require some adjustment
 #>    Number Group       sex
-#> 1       1    T1 value = 1
-#> 2       2    T2 value = 1
-#> 3       3    T1 value = 1
-#> 4       4    T2 value = 1
+#> 1       1    T2 value = 1
+#> 2       2    T1 value = 1
+#> 3       3    T2 value = 1
+#> 4       4    T1 value = 1
 #> 5       5    T1 value = 1
 #> 6       6    T2 value = 1
-#> 7       7    T2 value = 1
+#> 7       7    T1 value = 1
 #> 8       8    T2 value = 1
 #> 9       9    T1 value = 1
-#> 10     10    T1 value = 1
-#> 11     11    T2 value = 2
-#> 12     12    T1 value = 2
-#> 13     13    T2 value = 2
-#> 14     14    T1 value = 2
-#> 15     15    T2 value = 2
-#> 16     16    T1 value = 2
-#> 17     17    T2 value = 2
+#> 10     10    T2 value = 1
+#> 11     11    T1 value = 2
+#> 12     12    T2 value = 2
+#> 13     13    T1 value = 2
+#> 14     14    T2 value = 2
+#> 15     15    T1 value = 2
+#> 16     16    T2 value = 2
+#> 17     17    T1 value = 2
 #> 18     18    T2 value = 2
 #> 19     19    T1 value = 2
-#> 20     20    T1 value = 2
+#> 20     20    T2 value = 2
+#> 21     21    T1 value = 2
+#> 22     22    T2 value = 2
 ```

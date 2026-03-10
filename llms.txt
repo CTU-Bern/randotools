@@ -15,13 +15,13 @@ You can install the development version of `randotools` from github
 with:
 
 ``` r
-remotes::install_github("CTU-Bern/randotools")
+remotes::install_github("dcr-unibe-ch/randotools")
 ```
 
-Or from CTU Bern’s package universe
+Or from DCR’s package universe
 
 ``` r
-install.packages("randotools", repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org'))
+install.packages("randotools", repos = c('https://dcr-unibe-ch.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ## Check the imbalance expected for a proposed strata/blocksize combination

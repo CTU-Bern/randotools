@@ -8,15 +8,15 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/CTU-Bern/randotools/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/dcr-unibe-ch/randotools/blob/main/DESCRIPTION)
 
-Haynes A (2025). *randotools: Create Randomization Lists*. R package
-version 0.2.4, <https://ctu-bern.github.io/randotools/>.
+Haynes A (2026). *randotools: Create Randomization Lists*. R package
+version 0.2.5, <https://dcr-unibe-ch.github.io/randotools/>.
 
     @Manual{,
       title = {randotools: Create Randomization Lists},
       author = {Alan G Haynes},
-      year = {2025},
-      note = {R package version 0.2.4},
-      url = {https://ctu-bern.github.io/randotools/},
+      year = {2026},
+      note = {R package version 0.2.5},
+      url = {https://dcr-unibe-ch.github.io/randotools/},
     }

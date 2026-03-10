@@ -76,39 +76,39 @@ To disable block randomisation, set `blocksizes` to the same value as
 # example code
 randolist(10)
 #>    seq_in_strata block_in_strata blocksize seq_in_block arm
-#> 1              1               1         4            1   B
-#> 2              2               1         4            2   A
-#> 3              3               1         4            3   B
-#> 4              4               1         4            4   A
-#> 5              5               2         4            1   A
-#> 6              6               2         4            2   A
-#> 7              7               2         4            3   B
-#> 8              8               2         4            4   B
-#> 9              9               3         4            1   B
-#> 10            10               3         4            2   A
-#> 11            11               3         4            3   A
-#> 12            12               3         4            4   B
+#> 1              1               1         6            1   B
+#> 2              2               1         6            2   B
+#> 3              3               1         6            3   A
+#> 4              4               1         6            4   A
+#> 5              5               1         6            5   A
+#> 6              6               1         6            6   B
+#> 7              7               2         6            1   B
+#> 8              8               2         6            2   A
+#> 9              9               2         6            3   A
+#> 10            10               2         6            4   B
+#> 11            11               2         6            5   B
+#> 12            12               2         6            6   A
 # one stratifying variable
 randolist(10, strata = list(sex = c("M", "F")))
 #>    stratum seq_in_strata block_in_strata blocksize seq_in_block arm sex
 #> 1        1             1               1         2            1   B   M
 #> 2        1             2               1         2            2   A   M
-#> 3        1             3               2         4            1   B   M
-#> 4        1             4               2         4            2   A   M
+#> 3        1             3               2         4            1   A   M
+#> 4        1             4               2         4            2   B   M
 #> 5        1             5               2         4            3   B   M
 #> 6        1             6               2         4            4   A   M
-#> 7        1             7               3         2            1   B   M
-#> 8        1             8               3         2            2   A   M
-#> 9        1             9               4         2            1   A   M
-#> 10       1            10               4         2            2   B   M
-#> 11       2             1               1         6            1   A   F
+#> 7        1             7               3         4            1   A   M
+#> 8        1             8               3         4            2   B   M
+#> 9        1             9               3         4            3   B   M
+#> 10       1            10               3         4            4   A   M
+#> 11       2             1               1         6            1   B   F
 #> 12       2             2               1         6            2   A   F
 #> 13       2             3               1         6            3   B   F
 #> 14       2             4               1         6            4   B   F
-#> 15       2             5               1         6            5   B   F
+#> 15       2             5               1         6            5   A   F
 #> 16       2             6               1         6            6   A   F
-#> 17       2             7               2         4            1   A   F
-#> 18       2             8               2         4            2   B   F
+#> 17       2             7               2         4            1   B   F
+#> 18       2             8               2         4            2   A   F
 #> 19       2             9               2         4            3   B   F
 #> 20       2            10               2         4            4   A   F
 #>    strata_txt
@@ -136,48 +136,48 @@ randolist(10, strata = list(sex = c("M", "F")))
 randolist(10, strata = list(sex = c("M", "F"),
                             age = c("child", "adult")))
 #>    stratum seq_in_strata block_in_strata blocksize seq_in_block arm sex   age
-#> 1        1             1               1         4            1   A   M child
-#> 2        1             2               1         4            2   B   M child
-#> 3        1             3               1         4            3   A   M child
-#> 4        1             4               1         4            4   B   M child
-#> 5        1             5               2         4            1   A   M child
-#> 6        1             6               2         4            2   A   M child
-#> 7        1             7               2         4            3   B   M child
-#> 8        1             8               2         4            4   B   M child
-#> 9        1             9               3         2            1   A   M child
-#> 10       1            10               3         2            2   B   M child
-#> 11       2             1               1         2            1   A   F child
-#> 12       2             2               1         2            2   B   F child
-#> 13       2             3               2         4            1   B   F child
-#> 14       2             4               2         4            2   B   F child
-#> 15       2             5               2         4            3   A   F child
-#> 16       2             6               2         4            4   A   F child
-#> 17       2             7               3         4            1   B   F child
-#> 18       2             8               3         4            2   A   F child
-#> 19       2             9               3         4            3   A   F child
-#> 20       2            10               3         4            4   B   F child
-#> 21       3             1               1         2            1   A   M adult
-#> 22       3             2               1         2            2   B   M adult
-#> 23       3             3               2         4            1   A   M adult
-#> 24       3             4               2         4            2   B   M adult
-#> 25       3             5               2         4            3   A   M adult
-#> 26       3             6               2         4            4   B   M adult
-#> 27       3             7               3         6            1   B   M adult
-#> 28       3             8               3         6            2   A   M adult
-#> 29       3             9               3         6            3   B   M adult
-#> 30       3            10               3         6            4   A   M adult
-#> 31       3            11               3         6            5   A   M adult
-#> 32       3            12               3         6            6   B   M adult
-#> 33       4             1               1         4            1   A   F adult
+#> 1        1             1               1         6            1   A   M child
+#> 2        1             2               1         6            2   B   M child
+#> 3        1             3               1         6            3   A   M child
+#> 4        1             4               1         6            4   B   M child
+#> 5        1             5               1         6            5   A   M child
+#> 6        1             6               1         6            6   B   M child
+#> 7        1             7               2         6            1   B   M child
+#> 8        1             8               2         6            2   A   M child
+#> 9        1             9               2         6            3   A   M child
+#> 10       1            10               2         6            4   B   M child
+#> 11       1            11               2         6            5   A   M child
+#> 12       1            12               2         6            6   B   M child
+#> 13       2             1               1         4            1   A   F child
+#> 14       2             2               1         4            2   B   F child
+#> 15       2             3               1         4            3   A   F child
+#> 16       2             4               1         4            4   B   F child
+#> 17       2             5               2         6            1   A   F child
+#> 18       2             6               2         6            2   A   F child
+#> 19       2             7               2         6            3   B   F child
+#> 20       2             8               2         6            4   A   F child
+#> 21       2             9               2         6            5   B   F child
+#> 22       2            10               2         6            6   B   F child
+#> 23       3             1               1         4            1   A   M adult
+#> 24       3             2               1         4            2   A   M adult
+#> 25       3             3               1         4            3   B   M adult
+#> 26       3             4               1         4            4   B   M adult
+#> 27       3             5               2         6            1   A   M adult
+#> 28       3             6               2         6            2   B   M adult
+#> 29       3             7               2         6            3   A   M adult
+#> 30       3             8               2         6            4   B   M adult
+#> 31       3             9               2         6            5   B   M adult
+#> 32       3            10               2         6            6   A   M adult
+#> 33       4             1               1         4            1   B   F adult
 #> 34       4             2               1         4            2   A   F adult
 #> 35       4             3               1         4            3   B   F adult
-#> 36       4             4               1         4            4   B   F adult
-#> 37       4             5               2         6            1   A   F adult
-#> 38       4             6               2         6            2   A   F adult
-#> 39       4             7               2         6            3   B   F adult
-#> 40       4             8               2         6            4   B   F adult
-#> 41       4             9               2         6            5   A   F adult
-#> 42       4            10               2         6            6   B   F adult
+#> 36       4             4               1         4            4   A   F adult
+#> 37       4             5               2         4            1   B   F adult
+#> 38       4             6               2         4            2   A   F adult
+#> 39       4             7               2         4            3   A   F adult
+#> 40       4             8               2         4            4   B   F adult
+#> 41       4             9               3         2            1   B   F adult
+#> 42       4            10               3         2            2   A   F adult
 #>    strata_txt
 #> 1    M; child
 #> 2    M; child
@@ -189,8 +189,8 @@ randolist(10, strata = list(sex = c("M", "F"),
 #> 8    M; child
 #> 9    M; child
 #> 10   M; child
-#> 11   F; child
-#> 12   F; child
+#> 11   M; child
+#> 12   M; child
 #> 13   F; child
 #> 14   F; child
 #> 15   F; child
@@ -199,8 +199,8 @@ randolist(10, strata = list(sex = c("M", "F"),
 #> 18   F; child
 #> 19   F; child
 #> 20   F; child
-#> 21   M; adult
-#> 22   M; adult
+#> 21   F; child
+#> 22   F; child
 #> 23   M; adult
 #> 24   M; adult
 #> 25   M; adult
@@ -224,34 +224,33 @@ randolist(10, strata = list(sex = c("M", "F"),
 # different arm labels
 randolist(10, arms = c("arm 1", "arm 2"))
 #>    seq_in_strata block_in_strata blocksize seq_in_block   arm
-#> 1              1               1         6            1 arm 1
-#> 2              2               1         6            2 arm 1
-#> 3              3               1         6            3 arm 1
-#> 4              4               1         6            4 arm 2
-#> 5              5               1         6            5 arm 2
-#> 6              6               1         6            6 arm 2
-#> 7              7               2         4            1 arm 2
-#> 8              8               2         4            2 arm 1
-#> 9              9               2         4            3 arm 1
-#> 10            10               2         4            4 arm 2
+#> 1              1               1         2            1 arm 2
+#> 2              2               1         2            2 arm 1
+#> 3              3               2         6            1 arm 2
+#> 4              4               2         6            2 arm 1
+#> 5              5               2         6            3 arm 1
+#> 6              6               2         6            4 arm 2
+#> 7              7               2         6            5 arm 2
+#> 8              8               2         6            6 arm 1
+#> 9              9               3         4            1 arm 1
+#> 10            10               3         4            2 arm 2
+#> 11            11               3         4            3 arm 1
+#> 12            12               3         4            4 arm 2
 
 # unbalanced (2:1) randomization
 randolist(10, arms = c("arm 1", "arm 1", "arm 2"))
 #>    seq_in_strata block_in_strata blocksize seq_in_block   arm
-#> 1              1               1         9            1 arm 1
-#> 2              2               1         9            2 arm 1
-#> 3              3               1         9            3 arm 1
-#> 4              4               1         9            4 arm 2
-#> 5              5               1         9            5 arm 2
-#> 6              6               1         9            6 arm 1
-#> 7              7               1         9            7 arm 1
-#> 8              8               1         9            8 arm 1
-#> 9              9               1         9            9 arm 2
-#> 10            10               2         6            1 arm 1
-#> 11            11               2         6            2 arm 2
-#> 12            12               2         6            3 arm 1
-#> 13            13               2         6            4 arm 2
-#> 14            14               2         6            5 arm 1
-#> 15            15               2         6            6 arm 1
+#> 1              1               1         3            1 arm 1
+#> 2              2               1         3            2 arm 2
+#> 3              3               1         3            3 arm 1
+#> 4              4               2         9            1 arm 1
+#> 5              5               2         9            2 arm 1
+#> 6              6               2         9            3 arm 2
+#> 7              7               2         9            4 arm 1
+#> 8              8               2         9            5 arm 1
+#> 9              9               2         9            6 arm 1
+#> 10            10               2         9            7 arm 1
+#> 11            11               2         9            8 arm 2
+#> 12            12               2         9            9 arm 2
 
 ```

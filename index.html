@@ -28,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="index.html">randotools</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.5</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,17 +77,17 @@
 <p>You can install the development version of <code>randotools</code> from github with:</p>
 <!-- install.packages("randotools") -->
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"CTU-Bern/randotools"</span><span class="op">)</span></span></code></pre></div>
-<p>Or from CTU Bern’s package universe</p>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"dcr-unibe-ch/randotools"</span><span class="op">)</span></span></code></pre></div>
+<p>Or from DCR’s package universe</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"randotools"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'https://ctu-bern.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"randotools"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'https://dcr-unibe-ch.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="check-the-imbalance-expected-for-a-proposed-stratablocksize-combination">Check the imbalance expected for a proposed strata/blocksize combination<a class="anchor" aria-label="anchor" href="#check-the-imbalance-expected-for-a-proposed-stratablocksize-combination"></a>
 </h2>
 <p>Before generating a randomisation list, it can be useful to know whether the that will be attained with a certain number of strata is going to be appropriate.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ctu-bern.github.io/randotools/" class="external-link">randotools</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dcr-unibe-ch.github.io/randotools/" class="external-link">randotools</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">456</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/check_plan.html">check_plan</a></span><span class="op">(</span><span class="fl">50</span>, n_strata <span class="op">=</span> <span class="fl">5</span>, n_sim <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -176,7 +176,7 @@
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">rando_balance</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/imbalance_seq_plots.html">imbalance_seq_plots</a></span><span class="op">(</span><span class="va">rando_balance</span>, <span class="st">"rando_res"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/imbseq-1.png" width="100%"></p>
+<p><img src="reference/figures/imbseq-1.png" alt="" width="100%"></p>
 <p><code>imbalance_test</code> compares the observed imbalance with random allocation, providing a p-value, which can then be plotted to inspect the observed (the red line) and simulated imbalances (the bars):</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">(</span><span class="va">imb</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/imbalance_test.html">imbalance_test</a></span><span class="op">(</span><span class="va">rando_balance</span>, <span class="st">"rando_res"</span><span class="op">)</span><span class="op">)</span></span>
@@ -184,7 +184,7 @@
 <span><span class="co">#&gt; Overall imbalance: 0 </span></span>
 <span><span class="co">#&gt;   Probability of equal or less imbalance from random allocation: 0.072</span></span>
 <span><span class="fu"><a href="reference/imbalance_test_plot.html">imbalance_test_plot</a></span><span class="op">(</span><span class="va">imb</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/imbtest-1.png" width="100%"></p>
+<p><img src="reference/figures/imbtest-1.png" alt="" width="100%"></p>
 <div class="section level3">
 <h3 id="acknowledgements">Acknowledgements<a class="anchor" aria-label="anchor" href="#acknowledgements"></a>
 </h3>
@@ -197,8 +197,8 @@
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://cloud.r-project.org/package=randotools" class="external-link">View on CRAN</a></li>
-<li><a href="https://github.com/CTU-Bern/randotools/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/CTU-Bern/randotools/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/dcr-unibe-ch/randotools/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/dcr-unibe-ch/randotools/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -228,8 +228,8 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/CTU-Bern/randotools" class="external-link"><img src="https://img.shields.io/badge/dev%20version-0.2.4-blue.svg"></a></li>
-<li><a href="https://github.com/CTU-Bern/randotools/actions" class="external-link"><img src="https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://github.com/CTU-Bern/randotools" class="external-link"><img src="https://img.shields.io/badge/dev%20version-0.2.5-blue.svg"></a></li>
+<li><a href="https://github.com/dcr-unibe-ch/randotools/actions" class="external-link"><img src="https://github.com/dcr-unibe-ch/randotools/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://CRAN.R-project.org/package=randotools" class="external-link"><img src="https://www.r-pkg.org/badges/version/randotools" alt="CRAN status"></a></li>
 </ul>
 </div>
