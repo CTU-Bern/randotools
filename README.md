@@ -5,8 +5,8 @@
 
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/dev%20version-0.2.4-blue.svg)](https://github.com/CTU-Bern/randotools)
-[![R-CMD-check](https://github.com/CTU-Bern/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/CTU-Bern/randotools/actions)
+[![](https://img.shields.io/badge/dev%20version-0.2.5-blue.svg)](https://github.com/CTU-Bern/randotools)
+[![R-CMD-check](https://github.com/dcr-unibe-ch/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/dcr-unibe-ch/randotools/actions)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/randotools)](https://CRAN.R-project.org/package=randotools)
 <!-- badges: end -->
@@ -28,13 +28,13 @@ with:
 <!-- install.packages("randotools") -->
 
 ``` r
-remotes::install_github("CTU-Bern/randotools")
+remotes::install_github("dcr-unibe-ch/randotools")
 ```
 
-Or from CTU Bern’s package universe
+Or from DCR’s package universe
 
 ``` r
-install.packages("randotools", repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org'))
+install.packages("randotools", repos = c('https://dcr-unibe-ch.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ## Check the imbalance expected for a proposed strata/blocksize combination
@@ -152,7 +152,7 @@ data(rando_balance)
 imbalance_seq_plots(rando_balance, "rando_res")
 ```
 
-<img src="man/figures/imbseq-1.png" width="100%" />
+<img src="man/figures/imbseq-1.png" alt="" width="100%" />
 
 `imbalance_test` compares the observed imbalance with random allocation,
 providing a p-value, which can then be plotted to inspect the observed
@@ -166,7 +166,7 @@ providing a p-value, which can then be plotted to inspect the observed
 imbalance_test_plot(imb)
 ```
 
-<img src="man/figures/imbtest-1.png" width="100%" />
+<img src="man/figures/imbtest-1.png" alt="" width="100%" />
 
 ### Acknowledgements
 
