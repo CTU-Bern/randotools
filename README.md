@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/dev%20version-0.2.5-blue.svg)](https://github.com/dcr-unibe-ch/randotools)
+[![](https://img.shields.io/badge/dev%20version-0.2.6-blue.svg)](https://github.com/dcr-unibe-ch/randotools)
 [![R-CMD-check](https://github.com/dcr-unibe-ch/randotools/workflows/R-CMD-check/badge.svg)](https://github.com/dcr-unibe-ch/randotools/actions)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/randotools)](https://CRAN.R-project.org/package=randotools)
@@ -47,8 +47,7 @@ appropriate.
 library(randotools)
 set.seed(456)
 check_plan(50, n_strata = 5, n_sim = 100)
-#> ■■■■■■■■■■■■■■■■■■■■■■■■■■■ 86% | ETA: 0s■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 94% |
-#> ETA: 0s
+#> ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■     93% | ETA:  0s
 #> 
 #> Number of simulated trials: 100 
 #>  Number of participants per trial: 50 
@@ -154,7 +153,7 @@ data(rando_balance)
 imbalance_seq_plots(rando_balance, "rando_res")
 ```
 
-<img src="man/figures/imbseq-1.png" width="100%" />
+<img src="man/figures/imbseq-1.png" alt="" width="100%" />
 
 `imbalance_test` compares the observed imbalance with random allocation,
 providing a p-value, which can then be plotted to inspect the observed
@@ -168,7 +167,7 @@ providing a p-value, which can then be plotted to inspect the observed
 imbalance_test_plot(imb)
 ```
 
-<img src="man/figures/imbtest-1.png" width="100%" />
+<img src="man/figures/imbtest-1.png" alt="" width="100%" />
 
 ### Acknowledgements
 
