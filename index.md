@@ -34,6 +34,7 @@ appropriate.
 library(randotools)
 set.seed(456)
 check_plan(50, n_strata = 5, n_sim = 100)
+#> ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■     93% | ETA:  0s
 #> 
 #> Number of simulated trials: 100 
 #>  Number of participants per trial: 50 
@@ -159,7 +160,7 @@ imbalance_test_plot(imb)
 
 Development of the package was funded in part via a grant from the
 [Swiss Clinical Trial Organization Statistics and Methodology
-Platform](https://www.sctoplatforms.ch/en/scto-platforms/statistics-methodology-5.html).
+Platform](https://www.scto.ch/clinical-research-tools/platforms/statistics-and-methodology/).
 
 The package logo was created with
 [`ggplot2`](https://ggplot2.tidyverse.org/) and

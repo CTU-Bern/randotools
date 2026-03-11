@@ -1,5 +1,9 @@
 # Changelog
 
+## randotools 0.2.6
+
+correct additional URLs
+
 ## randotools 0.2.5
 
 update URLs

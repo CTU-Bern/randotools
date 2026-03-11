@@ -35,7 +35,7 @@ list of ggplots or a patchwork off ggplots (if `stack = TRUE`)
 
 ## See also
 
-[`imbalance_test()`](https://CTU-Bern.github.io/randolist/reference/imbalance_test.md)
+[`imbalance_test()`](https://dcr-unibe-ch.github.io/randolist/reference/imbalance_test.md)
 
 ## Examples
 

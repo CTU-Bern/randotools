@@ -69,7 +69,7 @@ a list with:
 
 ## See also
 
-[`imbalance_test_plot()`](https://CTU-Bern.github.io/randolist/reference/imbalance_test_plot.md)
+[`imbalance_test_plot()`](https://dcr-unibe-ch.github.io/randolist/reference/imbalance_test_plot.md)
 
 ## Examples
 
