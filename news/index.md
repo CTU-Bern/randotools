@@ -2,6 +2,8 @@
 
 ## randotools 0.2.6
 
+CRAN release: 2026-03-11
+
 correct additional URLs
 
 ## randotools 0.2.5
